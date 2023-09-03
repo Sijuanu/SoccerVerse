@@ -1,7 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+body{
+    background-color: #131a21 !important;
+}
+.calendar{
+    background-color: #131a21;
+    height: 300px;
+    font-family: 'Roboto', sans-serif;
+}
+.calendar .date{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    justify-content: end; /* Center the grid horizontally */
+    align-content: center; /* Center the grid vertically */
+    text-align: center;
+    color: white;
+}
+.offset {
+  grid-column-start: 5; /* Start this item from the first column (move it 3 columns to the left) */
+}
+.calendar .date p span{
+    border-bottom: 2px solid #7a84ff;
+}
+.calendar .date p{
+    font-size: .8rem;
+    margin: 2.5px 0px;
+}
+.calendar .date .active span{
+    background-color: #7a84ff;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendar .date .active{
+    margin-top: -2px;   
+}
+.today{
+    background-color: #7a84ff;
+    padding: 3px 10px;
+    border-radius: 14px;
+    display: inline-block;
+    margin: 20px 10px;
+}
+.today p{
+    font-size: .6rem;
+    margin: 0px;
 }
